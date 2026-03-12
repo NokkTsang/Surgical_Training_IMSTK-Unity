@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: b4127ac2b4a7f9c49af0ec2b42c521da
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: e43119e965e82b041aac262bc0f72039, type: 3}
+  reverseWinding: 0
+  transform:
+    e00: -1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  centerMesh: 1

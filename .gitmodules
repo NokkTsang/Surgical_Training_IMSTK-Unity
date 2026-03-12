@@ -1,0 +1,3 @@
+[submodule "ImstkSource~/iMSTK"]
+	path = ImstkSource~/iMSTK
+	url = https://gitlab.kitware.com/iMSTK/iMSTK.git

@@ -1,0 +1,20 @@
+{
+  "name": "com.kitware.imstk",
+  "version": "1.0.0",
+  "displayName": "Imstk",
+  "description": "The iMSTK-Unity package enabling high fidelity haptics and physical simulation.",
+  "unity": "2020.3",
+  "documentationUrl": "https://imstk-unity.readthedocs.io/en/v1.0.0",
+  "keywords": [
+    "simulation",
+    "haptics",
+    "physics",
+    "realtime"
+  ],
+  "license": "LICENSE.txt",
+  "author": {
+    "name": "Kitware",
+    "email": "kitware@kitware.com",
+    "url": "https://www.kitware.com"
+  }
+}
