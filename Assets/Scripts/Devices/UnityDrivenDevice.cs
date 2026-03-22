@@ -40,6 +40,12 @@ namespace ImstkUnity
         // the TrackingDevice update 
         new void Update()
         {
+            if (_device == null)
+            {
+                UnityEngine.Debug.LogWarning("[UnityDrivenDevice] Device not initialized");
+                return;
+            }
+
             var pos = transform.position.ToImstkVec();
             var rot = transform.rotation.ToImstkQuat();
             _device.setPosition(pos);

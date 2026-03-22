@@ -165,12 +165,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514110235}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1044870589}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &514110237
 SphereCollider:
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791441670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 170eeb0fc124ca24f9d638781ae042cf, type: 3}
   m_Name: 
@@ -323,9 +323,9 @@ MonoBehaviour:
   device: {fileID: 1044870590}
   rigid: {fileID: 791441673}
   angularKd: 50
-  angularKs: 1000
+  angularKs: 1
   linearKd: 100
-  linearKs: 10000
+  linearKs: 100
   useCriticalDamping: 1
   forceScale: 0.00001
   useForceSmoothing: 1
@@ -337,14 +337,14 @@ MonoBehaviour:
   translationScaling: 1
   invertX: 0
   invertY: 0
-  invertZ: 1
-  invertRotX: 1
-  invertRotY: 1
+  invertZ: 0
+  invertRotX: 0
+  invertRotY: 0
   invertRotZ: 0
   debugController: 0
   _forceFoldout: 1
   _offsetFoldout: 0
-  _axisMappingFoldout: 0
+  _axisMappingFoldout: 1
 --- !u!114 &791441673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791441670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d9b60b1ab165248ad9235937d99ee8, type: 3}
   m_Name: 
@@ -454,7 +454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1044870589}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1022181424
 GameObject:
@@ -543,9 +543,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 514110236}
-  - {fileID: 791441677}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044870590
@@ -555,7 +553,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044870587}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8896646612bf5144da412e3581a1a77d, type: 3}
   m_Name: 
@@ -944,6 +942,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!114 &2131193569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +962,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!4 &2131193570
 Transform:
   m_ObjectHideFlags: 0
@@ -982,3 +991,5 @@ SceneRoots:
   - {fileID: 2131193570}
   - {fileID: 1944565912}
   - {fileID: 1022181426}
+  - {fileID: 791441677}
+  - {fileID: 514110236}

@@ -258,7 +258,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820633227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ce368537dc79df418180af2578bf570, type: 3}
   m_Name: 
@@ -593,7 +593,23 @@ MonoBehaviour:
     doPartitioning: 0
     showStats: 1
   collisions:
-    _collisions: []
+    _collisions:
+    - model1: {fileID: 947728039}
+      model2: {fileID: 1223322630}
+      friction: 0
+      restitution: 0
+      deformableStiffness1: 0.2
+      deformableStiffness2: 0.2
+      rigidBodyCompliance: 0.0025
+      collisionTypeName: Auto
+    - model1: {fileID: 947728039}
+      model2: {fileID: 820633230}
+      friction: 0
+      restitution: 0
+      deformableStiffness1: 0.2
+      deformableStiffness2: 0.2
+      rigidBodyCompliance: 0.0025
+      collisionTypeName: Auto
 --- !u!1 &947728037
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +781,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223322627}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ce368537dc79df418180af2578bf570, type: 3}
   m_Name: 

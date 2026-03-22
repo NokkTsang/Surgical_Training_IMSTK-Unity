@@ -122,7 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &81320743
+--- !u!114 &102175658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,10 +136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   geomType: 12
   geometryFilters:
-  - {fileID: 1484773947}
-  - {fileID: 1133245927}
-  - {fileID: 713616225}
-  parent: {fileID: 1982579437}
+  - {fileID: 277748945}
+  - {fileID: 563963570}
+  - {fileID: 692315417}
+  parent: {fileID: 514010456}
 --- !u!1 &119930416
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a8919fa9e9ecb418d092e7f160dd39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputImstkGeom: {fileID: 1473132312}
+  inputImstkGeom: {fileID: 102175658}
   geometryJson: '{"geomType":12,"geometryFilters":[{"instanceID":19528},{"instanceID":19516},{"instanceID":19510}],"parent":{"instanceID":19536}}'
   inputUnityGeom: {fileID: 0}
   type: 12
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   geometryJson: '{"geomType":0,"center":{"x":0.0,"y":0.0,"z":0.0},"radius":0.10000000149011612,"orientation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"length":1.0}'
   inputUnityGeom: {fileID: 0}
   type: 0
-  showHandles: 1
+  showHandles: 0
 --- !u!1 &743112714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,25 +1370,7 @@ MonoBehaviour:
   geometryJson: '{"geomType":0,"center":{"x":0.0,"y":0.0,"z":0.0},"radius":0.10000000149011612,"orientation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"length":1.0}'
   inputUnityGeom: {fileID: 0}
   type: 0
-  showHandles: 1
---- !u!114 &1473132312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a64d4863477ce43a2d7770548cf80c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  geomType: 12
-  geometryFilters:
-  - {fileID: 277748945}
-  - {fileID: 563963570}
-  - {fileID: 692315417}
-  parent: {fileID: 514010456}
+  showHandles: 0
 --- !u!1 &1484773946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,7 +1404,7 @@ MonoBehaviour:
   geometryJson: '{"geomType":0,"center":{"x":0.0,"y":0.0,"z":0.0},"radius":0.10000000149011612,"orientation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"length":1.0}'
   inputUnityGeom: {fileID: 0}
   type: 0
-  showHandles: 1
+  showHandles: 0
 --- !u!4 &1484773948
 Transform:
   m_ObjectHideFlags: 0
@@ -1439,6 +1421,24 @@ Transform:
   - {fileID: 1677074041}
   m_Father: {fileID: 1982579440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1511439857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a64d4863477ce43a2d7770548cf80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geomType: 12
+  geometryFilters:
+  - {fileID: 1484773947}
+  - {fileID: 1133245927}
+  - {fileID: 713616225}
+  parent: {fileID: 1982579437}
 --- !u!114 &1622646269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,7 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a8919fa9e9ecb418d092e7f160dd39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputImstkGeom: {fileID: 81320743}
+  inputImstkGeom: {fileID: 1511439857}
   geometryJson: '{"geomType":12,"geometryFilters":[{"instanceID":19528},{"instanceID":19516},{"instanceID":19510}],"parent":{"instanceID":19536}}'
   inputUnityGeom: {fileID: 0}
   type: 12

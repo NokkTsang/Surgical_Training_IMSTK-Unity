@@ -1,0 +1,98 @@
+digraph imstkTaskGraph
+{
+style=filled;
+color=lightgrey;
+edge[arrowhead=vee, arrowtail=inv, arrowsize=.7, color=grey20];
+"node0" [ label="Scene_DefaultScene_Source" style=filled color=cornflowerblue];
+"node1" [ label="Scene_DefaultScene_Sink" style=filled color=cornflowerblue];
+"node2" [ label="SceneObject_Tissue/tissue_hole/Deformable_Source" style=filled color=cornflowerblue];
+"node3" [ label="SceneObject_Needle/Rigid_Source" style=filled color=cornflowerblue];
+"node4" [ label="SceneObject_PbdObjectCollision_Needle/Rigid_vs_Tissue/tissue_hole/Deformable_Source" style=filled color=cornflowerblue];
+"node5" [ label="SceneObject_PbdObjectCollision_Tissue/tissue_hole/Deformable_vs_Needle/Rigid_Source" style=filled color=cornflowerblue];
+"node6" [ label="SceneObject_Needle/Rigid_Update" style=filled color=cornflowerblue];
+"node7" [ label="SceneObject_Needle/Rigid_UpdateGeometry" style=filled color=cornflowerblue];
+"node8" [ label="SceneObject_Needle/Rigid_Sink" style=filled color=cornflowerblue];
+"node9" [ label="AbstractDynamicalModel_Source" style=filled color=cornflowerblue];
+"node10" [ label="PbdModel_IntegratePosition" style=filled color=cornflowerblue];
+"node11" [ label="PbdModel_SolveConstraints" style=filled color=cornflowerblue];
+"node12" [ label="Needle/Rigid_vs_Tissue/tissue_hole/Deformable_CollisionGeometryUpdate" style=filled color="#8B2610"];
+"node13" [ label="Tissue/tissue_hole/Deformable_vs_Needle/Rigid_CollisionGeometryUpdate" style=filled color="#8B2610"];
+"node14" [ label="PbdModel_UpdateVelocity" style=filled color=cornflowerblue];
+"node15" [ label="none0" style=filled color=cornflowerblue];
+"node16" [ label="none" style=filled color=cornflowerblue];
+"node17" [ label="AbstractDynamicalModel_Sink" style=filled color=cornflowerblue];
+"node18" [ label="SceneObject_Tissue/tissue_hole/Deformable_UpdateGeometry" style=filled color=cornflowerblue];
+"node19" [ label="SceneObject_Thread/Deformable_UpdateGeometry" style=filled color=cornflowerblue];
+"node20" [ label="SceneObject_PbdObjectCollision_Needle/Rigid_vs_Tissue/tissue_hole/Deformable_Sink" style=filled color=cornflowerblue];
+"node21" [ label="SceneObject_PbdObjectCollision_Tissue/tissue_hole/Deformable_vs_Needle/Rigid_Sink" style=filled color=cornflowerblue];
+"node22" [ label="SceneObject_PbdObjectCollision_Needle/Rigid_vs_Tissue/tissue_hole/Deformable_Update" style=filled color=cornflowerblue];
+"node23" [ label="SceneObject_PbdObjectCollision_Needle/Rigid_vs_Tissue/tissue_hole/Deformable_UpdateGeometry" style=filled color=cornflowerblue];
+"node24" [ label="Needle/Rigid_vs_Tissue/tissue_hole/Deformable_CollisionDetection" style=filled color=cornflowerblue];
+"node25" [ label="Needle/Rigid_vs_Tissue/tissue_hole/Deformable_CollisionHandlingA" style=filled color="#8B2610"];
+"node26" [ label="SceneObject_Tissue/tissue_hole/Deformable_Sink" style=filled color=cornflowerblue];
+"node27" [ label="SceneObject_House/Plane/StaticModel_Update" style=filled color=cornflowerblue];
+"node28" [ label="SceneObject_House/Plane/StaticModel_UpdateGeometry" style=filled color=cornflowerblue];
+"node29" [ label="SceneObject_House/Wall/StaticModel_Update" style=filled color=cornflowerblue];
+"node30" [ label="SceneObject_House/Wall/StaticModel_UpdateGeometry" style=filled color=cornflowerblue];
+"node31" [ label="SceneObject_Thread/Deformable_Update" style=filled color=cornflowerblue];
+"node32" [ label="SceneObject_SceneObject_Update" style=filled color=cornflowerblue];
+"node33" [ label="SceneObject_SceneObject_UpdateGeometry" style=filled color=cornflowerblue];
+"node34" [ label="SceneObject_Tissue/tissue_hole/Deformable_Update" style=filled color=cornflowerblue];
+"node35" [ label="SceneObject_PbdObjectCollision_Tissue/tissue_hole/Deformable_vs_Needle/Rigid_Update" style=filled color=cornflowerblue];
+"node36" [ label="SceneObject_PbdObjectCollision_Tissue/tissue_hole/Deformable_vs_Needle/Rigid_UpdateGeometry" style=filled color=cornflowerblue];
+"node37" [ label="Tissue/tissue_hole/Deformable_vs_Needle/Rigid_CollisionDetection" style=filled color=cornflowerblue];
+"node38" [ label="Tissue/tissue_hole/Deformable_vs_Needle/Rigid_CollisionHandlingA" style=filled color="#8B2610"];
+"node0" -> "node4"
+"node0" -> "node5"
+"node0" -> "node29"
+"node0" -> "node31"
+"node0" -> "node27"
+"node0" -> "node32"
+"node10" -> "node12"
+"node10" -> "node13"
+"node11" -> "node15"
+"node11" -> "node16"
+"node17" -> "node7"
+"node17" -> "node18"
+"node17" -> "node19"
+"node8" -> "node20"
+"node8" -> "node21"
+"node4" -> "node3"
+"node4" -> "node2"
+"node4" -> "node22"
+"node26" -> "node20"
+"node26" -> "node21"
+"node5" -> "node2"
+"node5" -> "node3"
+"node5" -> "node35"
+"node3" -> "node6"
+"node7" -> "node8"
+"node9" -> "node10"
+"node14" -> "node17"
+"node6" -> "node9"
+"node22" -> "node23"
+"node23" -> "node20"
+"node24" -> "node25"
+"node12" -> "node24"
+"node25" -> "node11"
+"node15" -> "node14"
+"node20" -> "node1"
+"node27" -> "node28"
+"node29" -> "node30"
+"node31" -> "node9"
+"node32" -> "node33"
+"node2" -> "node34"
+"node18" -> "node26"
+"node34" -> "node9"
+"node35" -> "node36"
+"node36" -> "node21"
+"node13" -> "node37"
+"node37" -> "node38"
+"node38" -> "node11"
+"node16" -> "node14"
+"node21" -> "node1"
+"node28" -> "node1"
+"node30" -> "node1"
+"node19" -> "node1"
+"node33" -> "node1"
+}

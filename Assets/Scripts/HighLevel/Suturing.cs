@@ -38,7 +38,9 @@ namespace ImstkUnity
         public Deformable thread;
         public Deformable tissue;
         public string activationKey = "s";
+        public Quest3InputHandler inputHandler;
         private bool _activated = false;
+        private bool _triggerWasPressed = false;
 
         public float needleSurfaceStiffness = 0.5f;
         public float threadSurfaceStiffness = 0.5f;
@@ -95,15 +97,17 @@ namespace ImstkUnity
                 Debug.LogError("Needle interaction does not have a NeedlePbdCH");
                 enabled = false;
                 return;
-            } else
-            {
-                ch.setNeedleToSurfaceStiffness(needleSurfaceStiffness);
-                ch.setSurfaceToNeedleStiffness(needleSurfaceStiffness);
-                ch.setThreadToSurfaceStiffness(threadSurfaceStiffness);
-                ch.setSurfaceToThreadStiffness(threadSurfaceStiffness);
-                ch.setPunctureDotThreshold(punctureDotThreshold);
             }
+            
+            // Initialize thread connection to needle
+            ch.init(threadPbd);
+            ch.setNeedleToSurfaceStiffness(needleSurfaceStiffness);
+            ch.setSurfaceToNeedleStiffness(needleSurfaceStiffness);
+            ch.setThreadToSurfaceStiffness(threadSurfaceStiffness);
+            ch.setSurfaceToThreadStiffness(threadSurfaceStiffness);
+            ch.setPunctureDotThreshold(punctureDotThreshold);
 
+            // Add the needle-tissue interaction to the scene (handles collision)
             SimulationManager.sceneManager.getActiveScene().addInteraction(_needleInteraction);
         }
 
@@ -114,9 +118,21 @@ namespace ImstkUnity
 
         public void Update()
         {
+            // Check keyboard key (backward compatibility)
             if (!_activated && Input.GetKeyDown(activationKey))
             {
                 Pull();
+            }
+
+            // Check VR controller trigger
+            if (inputHandler != null && inputHandler.IsTriggerPressed() && !_triggerWasPressed)
+            {
+                Pull();
+                _triggerWasPressed = true;
+            }
+            else if (inputHandler != null && !inputHandler.IsTriggerPressed())
+            {
+                _triggerWasPressed = false;
             }
         }
         public Imstk.NeedlePbdCH.PunctureData GetPunctureData()
