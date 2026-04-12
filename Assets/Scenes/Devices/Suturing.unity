@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170eeb0fc124ca24f9d638781ae042cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  device: {fileID: 1287254740}
+  device: {fileID: 1287254747}
   rigid: {fileID: 365673661}
   angularKd: 50
   angularKs: 10
@@ -450,7 +450,7 @@ Transform:
   m_GameObject: {fileID: 442274906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.035978563, y: 0.0002486105, z: 0.015847791}
+  m_LocalPosition: {x: -0.035978563, y: -1.446, z: 2.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1275,8 +1275,8 @@ GameObject:
   - component: {fileID: 1287254744}
   - component: {fileID: 1287254743}
   - component: {fileID: 1287254742}
-  - component: {fileID: 1287254740}
   - component: {fileID: 1287254741}
+  - component: {fileID: 1287254747}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -1299,18 +1299,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1742461589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1287254740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287254738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8896646612bf5144da412e3581a1a77d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1287254741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,7 +1313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerNode: 5
   triggerPressed: 1
-  gripPressed: 0
+  gripPressed: 1
 --- !u!210 &1287254742
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1957,6 +1945,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1287254747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287254738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bc7c6efdd698a46b98ba9dad6e15a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: 1287254741}
+  enableDebugLog: 0
 --- !u!1 &1306446266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2187,7 @@ MonoBehaviour:
   geometryJson: 
   inputUnityGeom: {fileID: 776759249}
   type: 11
-  showHandles: 0
+  showHandles: 1
 --- !u!114 &1540920136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,8 +2201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dynamicGeometry: 0
-  ignoreGravity: 0
-  _collisionPanelOpen: 0
+  ignoreGravity: 1
+  _collisionPanelOpen: 1
   visualGeomFilter: {fileID: 1540920135}
   physicsGeomFilter: {fileID: 1540920135}
   collisionGeomFilter: {fileID: 1540920135}
@@ -2223,7 +2225,7 @@ MonoBehaviour:
   viscousDampingCoeff: 0.01
   useFEMConstraint: 0
   materialType: 2
-  uniformMassValue: 0.000019801980198019803
+  uniformMassValue: 0.00000009900990099009901
   useBodyDamping: 0
   linearDampingCoeff: 0
   angularDampingCoeff: 0
@@ -2320,7 +2322,7 @@ Transform:
   m_GameObject: {fileID: 1647174708}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.118, z: 0}
+  m_LocalPosition: {x: 0, y: -0.123, z: 0}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2346,7 +2348,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e6736931c4d93a542bc3f0fa2f514de2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2426,7 +2428,7 @@ Transform:
   m_GameObject: {fileID: 1689184217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.956, z: 0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2463,7 +2465,7 @@ MonoBehaviour:
   writeTaskGraph: 1
   pbdModelConfiguration:
     gravity: {x: 0, y: -9.81, z: 0}
-    iterations: 4
+    iterations: 8
     useRealtime: 1
     dt: 0.01
     linearDampingCoeff: 0.01
@@ -2472,8 +2474,8 @@ MonoBehaviour:
     showStats: 1
   collisions:
     _collisions:
-    - model1: {fileID: 365673661}
-      model2: {fileID: 1825393525}
+    - model1: {fileID: 1540920136}
+      model2: {fileID: 562937791}
       friction: 0
       restitution: 0
       deformableStiffness1: 0.2
@@ -2538,7 +2540,7 @@ Transform:
   m_GameObject: {fileID: 1727065739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3359,7 +3361,7 @@ MonoBehaviour:
   geometryJson: 
   inputUnityGeom: {fileID: 0}
   type: 10
-  showHandles: 0
+  showHandles: 1
 --- !u!114 &1825393524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3414,10 +3416,10 @@ MonoBehaviour:
   viscousDampingCoeff: 0.01
   useFEMConstraint: 1
   materialType: 2
-  uniformMassValue: 0.00099601593625498
+  uniformMassValue: 0.001
   useBodyDamping: 0
-  linearDampingCoeff: 0.01
-  angularDampingCoeff: 0.01
+  linearDampingCoeff: 0
+  angularDampingCoeff: 0
 --- !u!114 &1825393526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3481,8 +3483,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028055736}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.956, z: 0.40999997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3490,7 +3492,7 @@ Transform:
   - {fileID: 1647174709}
   - {fileID: 1825393529}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &2028055738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3506,11 +3508,16 @@ MonoBehaviour:
   needle: {fileID: 365673661}
   thread: {fileID: 1540920136}
   tissue: {fileID: 1825393525}
-  activationKey: s
   inputHandler: {fileID: 1287254741}
   needleSurfaceStiffness: 0.3
+  surfaceToNeedleStiffness: 0.5
   threadSurfaceStiffness: 0.3
-  punctureDotThreshold: 0.8
+  threadToSurfaceStiffness: 0.2
+  punctureDotThreshold: 0.6
+  needleTailLocalOffset: {x: 0, y: 0, z: 0.0177}
+  overrideCDType: 
+  activationKey: s
+  enableDebugLog: 1
 --- !u!114 &2028055739
 MonoBehaviour:
   m_ObjectHideFlags: 0

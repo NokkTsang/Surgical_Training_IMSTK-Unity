@@ -183,9 +183,16 @@ namespace ImstkUnity
             vecDataArray.getValues(dArray);
             for (uint i = 0, j = 0; i < vecDataArray.size(); i++)
             {
-                vector3Array[i].x = (float)dArray[j++];
-                vector3Array[i].y = (float)dArray[j++];
-                vector3Array[i].z = (float)dArray[j++];
+                float x = (float)dArray[j++];
+                float y = (float)dArray[j++];
+                float z = (float)dArray[j++];
+                // Sanitize NaN/Infinity that iMSTK may produce during puncture/constraint solving
+                if (float.IsNaN(x) || float.IsInfinity(x)) x = 0f;
+                if (float.IsNaN(y) || float.IsInfinity(y)) y = 0f;
+                if (float.IsNaN(z) || float.IsInfinity(z)) z = 0f;
+                vector3Array[i].x = x;
+                vector3Array[i].y = y;
+                vector3Array[i].z = z;
             }
             return vector3Array;
         }
@@ -209,9 +216,16 @@ namespace ImstkUnity
             vecDataArray.getValues(_doubleArrayBuffer);
             for (uint i = 0, j = 0; i < vecDataArray.size(); i++)
             {
-                vector3Array[i].x = (float)_doubleArrayBuffer[j++];
-                vector3Array[i].y = (float)_doubleArrayBuffer[j++];
-                vector3Array[i].z = (float)_doubleArrayBuffer[j++];
+                float x = (float)_doubleArrayBuffer[j++];
+                float y = (float)_doubleArrayBuffer[j++];
+                float z = (float)_doubleArrayBuffer[j++];
+                // Sanitize NaN/Infinity that iMSTK may produce during puncture/constraint solving
+                if (float.IsNaN(x) || float.IsInfinity(x)) x = 0f;
+                if (float.IsNaN(y) || float.IsInfinity(y)) y = 0f;
+                if (float.IsNaN(z) || float.IsInfinity(z)) z = 0f;
+                vector3Array[i].x = x;
+                vector3Array[i].y = y;
+                vector3Array[i].z = z;
             }
         }
 

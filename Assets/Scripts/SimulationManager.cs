@@ -142,7 +142,11 @@ namespace ImstkUnity
 
         public float EngineTime
         {
-            get { return (float)(_currentScene.getFrameTime() * 1000.0); }
+            get { 
+                if (_currentScene == null)
+                    return 0f;
+                return (float)(_currentScene.getFrameTime() * 1000.0); 
+            }
         }
 
         /// <summary>
@@ -251,7 +255,10 @@ namespace ImstkUnity
 
                     s_AdvancePerfMarker.Begin();
 
-                    _currentScene.advance(fixedTimestep);
+                    if (_currentScene != null)
+                    {
+                        _currentScene.advance(fixedTimestep);
+                    }
 
                     s_AdvancePerfMarker.End();
                     Monitor.PulseAll(_simulationThread);

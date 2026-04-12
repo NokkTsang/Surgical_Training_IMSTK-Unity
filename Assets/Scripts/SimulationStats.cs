@@ -104,7 +104,15 @@ namespace ImstkUnity
             GUILayout.Label(String.Format("Graphics {0:F2} fps", _avgFrameRate),GUILayout.Height(36));
             GUILayout.Label(String.Format("Physics  {0:F2} ms | {1:F2} ms", _avgPhysicsTime, _avgEngineTime), GUILayout.Height(36));
             GUILayout.Label(String.Format("Mesh [{0}]   {1:F2} ms", _deformables.Length, _meshUpdateTime), GUILayout.Height(36));
-            GUILayout.Label(String.Format("Constraints (not-part) {0}", SimulationManager.pbdModel.getConstraints().getConstraints().Count), GUILayout.Height(36));
+            
+            // Safely get constraint count
+            int constraintCount = 0;
+            if (SimulationManager.pbdModel != null && SimulationManager.pbdModel.getConstraints() != null)
+            {
+                constraintCount = SimulationManager.pbdModel.getConstraints().getConstraints().Count;
+            }
+            GUILayout.Label(String.Format("Constraints (not-part) {0}", constraintCount), GUILayout.Height(36));
+            
             GUILayout.EndVertical();
             GUILayout.EndArea();
 

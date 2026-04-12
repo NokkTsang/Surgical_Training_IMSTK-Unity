@@ -57,16 +57,28 @@ namespace ImstkUnity
                 return;
             }
 
-            // Read trigger button state
-            if (targetDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue))
+            // Read trigger button state - use trigger axis (0-1) and check if > 0.5
+            if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
             {
-                triggerPressed = triggerValue;
+                triggerPressed = triggerValue > 0.5f;
+                Debug.Log($"[Quest3InputHandler] Trigger value: {triggerValue}, Pressed: {triggerPressed}");
+            }
+            else
+            {
+                Debug.LogWarning("[Quest3InputHandler] Failed to read trigger axis");
+                triggerPressed = false;
             }
 
             // Read grip button state
-            if (targetDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool gripValue))
+            if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
             {
-                gripPressed = gripValue;
+                gripPressed = gripValue > 0.5f;
+                Debug.Log($"[Quest3InputHandler] Grip value: {gripValue}, Pressed: {gripPressed}");
+            }
+            else
+            {
+                Debug.LogWarning("[Quest3InputHandler] Failed to read grip axis");
+                gripPressed = false;
             }
         }
 

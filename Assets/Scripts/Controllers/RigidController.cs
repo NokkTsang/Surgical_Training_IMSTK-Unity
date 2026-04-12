@@ -73,11 +73,15 @@ namespace ImstkUnity
 
         public Vector3 GetPosition()
         {
+            if (controller == null)
+                return Vector3.zero;
             Imstk.Vec3d pos = controller.getPosition();
             return pos.ToUnityVec();
         }
         public Quaternion GetOrientation()
         {
+            if (controller == null)
+                return Quaternion.identity;
             Imstk.Quatd quat = controller.getOrientation();
             return quat.ToUnityQuat();
         }
