@@ -1,52 +1,60 @@
 
-## SUNSET NOTICE
+# Mixed Reality (MR) Surgical Training App for Meta Quest
 
-Support and development of Interactive Medical Simulation Toolkit (iMSTK) has been discontinued as of May-02-2025. This project is no longer under active development or support.
-## About
+This is a Unity-based mixed reality application for surgical training, powered by the [Interactive Medical Simulation Toolkit (iMSTK)](https://www.imstk.org/). The project delivers real-time deformable tissue simulation, needle–tissue interaction, and suturing mechanics specifically designed for Meta Quest devices in medical training scenarios.
 
-#### Overview
-[iMSTK](https://www.imstk.org/) is a C++ based free & open-source toolkit that aids rapid prototyping of real-time multi-modal surgical simulation scenarios. [Unity](https://unity.com/) is a multi-platform game engine designed to create 2D and 3D games. You will have received this plugin either via the Unity Asset Store or by cloning the git repository.
+## 🎯 Project Overview
 
-While the asset contains all the binaries needed to run the plugin the code in the repository only contains the C# scripts, demo scenarios and resources needed to build imstk Unity package. To run it you will need to build iMSTK. The repository contains some folders not included in the Asset, any folder with `~` as the last character will not be visible inside of Unity.
+### Key Features
 
-#### License
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
+**Suturing Simulation**
+The suturing module demonstrates full needle puncture, thread insertion, and stitching using iMSTK 7.0's Position-Based Dynamics (PBD) engine. The needle interacts with deformable tissue in real time — puncturing, threading, and closing wounds with physically-based constraints.
 
-## Resources
+**Deformable Tissue Interaction**
+Integrates iMSTK's PBD solver to provide real-time deformable organ models with tetrahedral mesh physics, surface collision detection, and instrument-to-tissue interactions for surgical training scenarios.
 
-### Documentation
+## 📋 Requirements
 
-User documentation: [https://imstk-unity.readthedocs.io/en/latest/](https://imstk-unity.readthedocs.io/en/latest/)
+### Development Environment
+- **Unity Hub**: 3.12.1+
+- **Unity Editor**: 2022.3 LTS (tested with 2022.3.62f1)
+- **Visual Studio**: 2019 or 2022 Build Tools (for building iMSTK C++ from source)
 
-API documentation: https://imstk-unity.gitlab.io/documentation/
+### Packages
+- AR Foundation (5.2.2+)
+- XR Interaction Toolkit (2.6.5+)
+- XR Plugin Management (4.5.4+)
+- Oculus XR Plugin (4.5.4+)
+- iMSTK 7.0 (included as prebuilt DLLs in `Assets/Plugins/x86_64/`)
 
-### Issue-tracker
+### Platform Support
+- Meta Quest 2
+- Meta Quest 3
+- Meta Quest Pro
 
-https://gitlab.kitware.com/iMSTK/imstk-unity/issues
+## 🛠️ Installation
 
-### Support 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/NokkTsang/Surgical_Training_IMSTK-Unity.git --recurse-submodules
+   ```
+2. Open the project in Unity 2022.3 LTS via Unity Hub.
+3. The prebuilt iMSTK DLLs are included in `Assets/Plugins/x86_64/` — no C++ build required for running the scenes.
+4. Open the suturing scene at `Assets/Scenes/Devices/Suturing.unity`.
 
-Discourse: https://discourse.kitware.com/c/imstk/
+### Building iMSTK from Source (Optional)
 
-## Building iMSTK-Unity
+If you need to modify the C++ iMSTK source:
 
-#### Prerequisites
-* Git
-* Unity 2021.3
-* Visual Studio 2022 (Not tested with older versions)
+1. Ensure Visual Studio 2019 Build Tools and CMake are installed.
+2. Run `ImstkSource~/InstallImstk.bat` or build manually:
+   ```bash
+   cd ImstkSource~/build
+   cmake .. -DiMSTK_BUILD_FOR_UNITY=ON
+   cmake --build . --config Release
+   ```
+3. Copy the rebuilt `iMSTKCWrapper.dll` from `ImstkSource~/build/install/bin/` to `Assets/Plugins/x86_64/`.
 
-To checkout use `git clone https://gitlab.kitware.com/iMSTK/imstk-unity.git --recurse-submodules` this will checkout all of iMSTK-Unity and should also check out the correct version of iMSTK into the `iMSTKSource~` directory, where you will be able to build the binaries.
+## 📄 License
 
-## Build Instructions
-
-See [user documentation](https://imstk-unity.readthedocs.io/en/latest/documentation.html#setup-for-development) for build instructions. 
-
-## Contact 
-
-Contact Kitware at https://www.kitware.com/contact-us/
-
-## Known Issues
-
-- Starting the scene with a OpenHaptics device in the scene but no device plugged in will crash Unity
-- When using iMSTK with an OpenHaptics ethernet device the simulation may crash Unity
-- Creating deformables with different sets of contraints may not work
+This project is licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.txt) — see the [LICENSE](LICENSE.txt) file for details.
