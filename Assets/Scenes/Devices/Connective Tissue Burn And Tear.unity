@@ -1181,7 +1181,7 @@ Transform:
   m_GameObject: {fileID: 526092816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55, y: -0.344, z: -4.67}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   burnables:
   - {fileID: 24234205}
   device: {fileID: 890821681}
-  burnButton: 0
+  burnButton: -1
   burnKey: b
 --- !u!114 &532527554
 MonoBehaviour:

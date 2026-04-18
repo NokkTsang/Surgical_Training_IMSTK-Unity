@@ -4,7 +4,31 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Devices/Connective Tissue Burn And Tear.unity
+    guid: b4a66fa8c800ab243b1ff9be2999afd8
+  - enabled: 1
+    path: Assets/Scenes/Devices/Grasping.unity
+    guid: e295ccb52c10dd84ab63663d94b84657
+  - enabled: 1
+    path: Assets/Scenes/Devices/PbdThinTissueContact.unity
+    guid: d6951ff38954b3242a5059d94d58938e
+  - enabled: 1
+    path: Assets/Scenes/Devices/RigidController.unity
+    guid: 42c33c0235334f44eb4aa7d63c653d36
+  - enabled: 1
+    path: Assets/Scenes/Devices/RigidControllerVrpn.unity
+    guid: a3456ec1f55f2ad44999e8d4f3ef9082
+  - enabled: 1
+    path: Assets/Scenes/Devices/Suturing.unity
+    guid: 66f683c6f3ab77349820710090fc6270
+  - enabled: 1
+    path: Assets/Scenes/Devices/TissueContact.unity
+    guid: a95b1c0cca8930a42bead522f287a9ce
+  - enabled: 1
+    path: Assets/Scenes/Devices/Virtual Coupling.unity
+    guid: 8690af40e598e794b9ac9b13ac670f52
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29f58254c2ff2fe4e84d1be317bd1b24, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: caa91b27c9250f94b956ffbcdc43a464, type: 2}
